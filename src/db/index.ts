@@ -13,8 +13,7 @@ const globalForDb = globalThis as typeof globalThis & {
   __arenaNextJsSchemaReady?: Promise<void>;
 };
 
-const useSsl = process.env.NODE_ENV === "production" || /neon|vercel|render|supabase|azure/i.test(databaseUrl);
-
+const useSsl = /neon|vercel|render|supabase|azure/i.test(databaseUrl);
 export const pool =
   globalForDb.__arenaNextJsPostgresqlPool ??
   new Pool({
