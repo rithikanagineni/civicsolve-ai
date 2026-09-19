@@ -1,0 +1,11 @@
+node_modules/
+.next/
+.wrangler/
+.env
+.env.local
+.env.*.local
+!.env.example
+dist/
+build/
+target/
+*.log
